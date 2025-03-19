@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/YOUR_PIPELINE/master/nextflow_schema.json",
+    "title": "Nextflow pipeline parameters",
+    "description": "This pipeline lists files recursively in a specified directory.",
+    "type": "object",
+    "properties": {
+        "inputDir": {
+            "type": "string",
+            "description": "The directory to list files from. Must be an absolute path.",
+            "pattern": "^\\/.*",
+            "minLength": 1,  
+            "examples": [
+                "/path/to/your/directory"
+            ]
+        }
+    },
+    "required": ["inputDir"] 
+}
